@@ -1,0 +1,18 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/valid"
+        app:actionViewClass="android.widget.Spinner"
+        app:showAsAction="never"
+        android:title="Normal Flow" />
+    <item
+        android:id="@+id/mal"
+        app:actionViewClass="android.widget.Spinner"
+        app:showAsAction="never"
+        android:title="Mal Flow" />
+    <item
+        android:id="@+id/empty"
+        app:actionViewClass="android.widget.Spinner"
+        app:showAsAction="never"
+        android:title="Empty Flow" />
+</menu>

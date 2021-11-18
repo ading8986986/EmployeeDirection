@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="employeeItem"
+            type="com.example.employeedirection.feature.employee_list.domain.model.Employee" />
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="5dp"
+        app:cardElevation="5dp"
+        app:cardMaxElevation="10dp"
+        app:cardPreventCornerOverlap="true"
+        android:layout_margin="10dp"
+        app:cardUseCompatPadding="false">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="20dp"
+            android:paddingVertical="15dp">
+
+            <ImageView
+                android:id="@+id/headImage"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                app:layout_constraintTop_toTopOf="@id/name"
+                app:layout_constraintStart_toStartOf="parent">
+
+            </ImageView>
+
+            <TextView
+                android:id="@+id/name"
+                style="@style/TextAppearance.AppCompat.Subhead"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                app:layout_constraintStart_toEndOf="@id/headImage"
+                app:layout_constraintTop_toTopOf="parent"
+                android:text="@{employeeItem.fullName}"
+                tools:text="John Handson" />
+
+
+            <ImageView
+                android:id="@+id/icEmail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:src="@drawable/ic_email"
+                app:layout_constraintBottom_toBottomOf="@id/email"
+                app:layout_constraintStart_toEndOf="@id/headImage"
+                app:layout_constraintTop_toTopOf="@id/email" />
+
+            <TextView
+                android:id="@+id/email"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:text="@{employeeItem.emailAddress}"
+                app:layout_constraintStart_toEndOf="@id/icEmail"
+                app:layout_constraintTop_toBottomOf="@id/name"
+                android:maxLines="1"
+                android:ellipsize="end"
+                tools:text="John.Handson@gmail.com"/>
+
+            <ImageView
+                android:id="@+id/icTeam"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_group"
+                android:layout_marginStart="10dp"
+                app:layout_constraintTop_toTopOf="@id/team"
+                app:layout_constraintBottom_toBottomOf="@id/team"
+                app:layout_constraintStart_toEndOf="@id/headImage"
+                />
+
+            <TextView
+                android:id="@+id/team"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                app:layout_constraintStart_toEndOf="@id/icTeam"
+                app:layout_constraintTop_toBottomOf="@id/email"
+                android:text="@{employeeItem.team}"
+                tools:text="Android Team"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+
+
+
+
+</layout>
