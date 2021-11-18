@@ -1,3 +1,9 @@
 <resources>
-    <string name="app_name">EmployeeDirection</string>
+    <string name="app_name">Employee Direction</string>
+    <string name="internet_error">Can\'t load page, Please check you internet</string>
+    <string name="technical_error">We are having technical issues, please try later</string>
+    <string name="empty_employees_list">Oops! the employ list is empty</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
 </resources>
