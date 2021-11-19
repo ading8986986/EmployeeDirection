@@ -10,6 +10,10 @@
       - Data layer - it has remote repository, and handle the error scenarios caused by Exceptionss or bad data (such as missing mandantory field)
       - Domain layer - defined use cases, return Flow type to viewModel in presentation
       - Presentation - handle observers
+  - Software design patters:
+      - Creational: Independency inject, Singleton, 
+      - Structual:  Facad in repository API, Adapter of recyclerView
+      - Behavioral: Observer in viewModel
   - UI Implementaion: 
       - Activity as container
       - Activity owned toolBar with menu to load 3 different types of data (employees.json, employees_malformed.json,employees_empty.json) 
@@ -30,5 +34,9 @@
         - Repository test covers most of reponse types (code of 200, 400, etc)    
         - Usecase test cover all 3 parameter types of its method
         - ViewModel test case cover 3 types of Usecases.
+3. Copied-in code or copied-in dependencies: only 3 helper classes
+   - package com.example.employeedirection.common.model.Event
+   - package com.example.employeedirection.feature.employee_list.common.util.getOrAwaitValueTest for testing
+   - package com.example.employeedirection.common.MainCoroutineRule for testing
 
-3. Time of duration: 5-7 hours
+4. Time of duration: 5-7 hours
